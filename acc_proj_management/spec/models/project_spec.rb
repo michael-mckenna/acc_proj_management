@@ -1,5 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'is valid with valid fields' do
+    
+  end 
+
+  it 'raises ConstraintException' do
+    # Verify - must have non null name field
+    expect{ Project.create() }.to raise_error
+  end 
+
+  it 'should have many users' do
+
+  end
 end
