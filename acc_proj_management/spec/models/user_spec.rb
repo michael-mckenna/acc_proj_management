@@ -20,4 +20,9 @@ RSpec.describe User, type: :model do
         # Verify
         expect{ User.create() }.to raise_error
   end
+
+  it 'should belong to many project' do 
+    user = User.create(name: 'Michael McKenna', email: 'mckemike12@tamu.edu', is_admin: true)
+    expect(user).to have_and_belong_to_many(:projects)
+  end
 end

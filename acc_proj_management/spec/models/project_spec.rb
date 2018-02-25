@@ -1,16 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Project, type: :model do
+
+	before(:each) do
+		@project = Project.create(name: 'acc project', description: 'project management',
+    						is_accepted: true, is_finished: false)
+	end
+	
   it 'is valid with valid fields' do
   	# Set up
-    project = Project.create(name: 'acc project', description: 'project management',
-    						is_accepted: true, is_finished: false)
+    # project = Project.create(name: 'acc project', description: 'project management',
+    # 						is_accepted: true, is_finished: false)
 
     # Exercise
-    name = project.name
-    description = project.description
-    is_accepted = project.is_accepted
-    is_finished = project.is_finished
+    name = @project.name
+    description = @project.description
+    is_accepted = @project.is_accepted
+    is_finished = @project.is_finished
 
     # Verify
     expect(name).to eq 'acc project'
@@ -21,10 +27,13 @@ RSpec.describe Project, type: :model do
 
   it 'raises ConstraintException' do
     # Verify - must have non null name field
-    expect{ Project.create() }.to raise_error
+    expect{ Project.create() }.to raise_error()
   end 
 
   it 'should have many users' do
-
+  	# # Set up
+   #  project = Project.create(name: 'new project', description: 'project descriptions',
+   #  						is_accepted: true, is_finished: false)
+  	expect(@project).to have_and_belong_to_many(:users)
   end
 end
