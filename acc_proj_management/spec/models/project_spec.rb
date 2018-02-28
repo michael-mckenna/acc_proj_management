@@ -8,10 +8,6 @@ RSpec.describe Project, type: :model do
 	end
 	
   it 'is valid with valid fields' do
-  	# Set up
-    # project = Project.create(name: 'acc project', description: 'project management',
-    # 						is_accepted: true, is_finished: false)
-
     # Exercise
     name = @project.name
     description = @project.description
@@ -31,9 +27,7 @@ RSpec.describe Project, type: :model do
   end 
 
   it 'should have many users' do
-  	# # Set up
-   #  project = Project.create(name: 'new project', description: 'project descriptions',
-   #  						is_accepted: true, is_finished: false)
+  	# Set up
   	expect(@project).to have_and_belong_to_many(:users)
   end
 end
