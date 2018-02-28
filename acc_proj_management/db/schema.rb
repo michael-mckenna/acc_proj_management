@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_21_192804) do
+ActiveRecord::Schema.define(version: 2018_02_25_060414) do
 
   create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.boolean "is_accepted"
-    t.boolean "is_finished"
+    t.string "name", null: false
+    t.text "description"
+    t.boolean "is_accepted", default: false, null: false
+    t.boolean "is_finished", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
