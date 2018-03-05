@@ -5,6 +5,44 @@
         1,
         null
       ],
+      "/home/mtp426/workspace/RUBY/acc_proj_management/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/home/mtp426/workspace/RUBY/acc_proj_management/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/models/project.rb": [
         1,
         1,
@@ -18,6 +56,17 @@
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/models/user.rb": [
         1,
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/channels/application_cable/channel.rb": [
@@ -32,16 +81,11 @@
         0,
         0
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/application_controller.rb": [
-        0,
-        0
-      ],
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/pages_controller.rb": [
         0,
         0,
         null,
         0,
-        null,
         0
       ],
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/jobs/application_job.rb": [
@@ -55,6 +99,6 @@
         0
       ]
     },
-    "timestamp": 1520271778
+    "timestamp": 1520287528
   }
 }

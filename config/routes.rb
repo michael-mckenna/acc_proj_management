@@ -13,10 +13,8 @@ AccProjManagement::Application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :sessions, only: [:create, :destroy]
-  # resource :home, only: [:show]
-  resource :pages, only: [:home]
+  resource :home, only: [:show]
 
-  # root to: "home#show"
-  root to: "pages#home"
+  root to: "home#show"
 end
 
