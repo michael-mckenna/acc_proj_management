@@ -39,7 +39,7 @@ gem 'shoulda'
 
 # Support responsive UI 
 gem 'materialize-sass', '~> 1.0.0.alpha4'
-
+# Support Google Authentication
 gem "omniauth-google-oauth2"
 
  
