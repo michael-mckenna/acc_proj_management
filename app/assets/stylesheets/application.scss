@@ -1,0 +1,100 @@
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+html {
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 400;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    color: white;
+
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+p {
+	color: white;
+}
+
+#logo {
+	width: 15%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+
+#home {
+    padding: 0;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(background4.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(background4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+#content {
+	text-align: center;
+	margin-top: 5%;
+}
+
+#google_signin {
+	width: 100%;
+	height: auto;
+	padding: 0;
+}
+
+.btn, .btn-lg {
+	padding: 0;
+	margin-bottom: 20px;
+	outline: 2px solid #fff;
+	border-radius: 5%;
+	transition: 0.3s ease;
+}
+
+.btn:hover, .btn-lg:hover {
+	outline: 3px solid rgb(2,136,209);
+	border-radius: 5%;
+	transition: 0.3s ease;
+}
+
+
+#text {
+	color: #fff;
+}
+
+#text:hover {
+	color: rgb(2,136,209);
+	text-decoration: none;
+}
