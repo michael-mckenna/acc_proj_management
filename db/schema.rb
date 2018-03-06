@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_25_060414) do
+ActiveRecord::Schema.define(version: 2018_03_05_225704) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name", null: false
@@ -28,10 +28,14 @@ ActiveRecord::Schema.define(version: 2018_02_25_060414) do
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
-    t.string "email", null: false
+    t.string "email"
     t.boolean "is_admin", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
 end
