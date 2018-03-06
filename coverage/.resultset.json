@@ -58,7 +58,7 @@
         1,
         null,
         1,
-        0,
+        1,
         0,
         0,
         0,
@@ -81,13 +81,6 @@
         0,
         0
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/pages_controller.rb": [
-        0,
-        0,
-        null,
-        0,
-        0
-      ],
       "/home/mtp426/workspace/RUBY/acc_proj_management/app/jobs/application_job.rb": [
         0,
         0
@@ -99,6 +92,6 @@
         0
       ]
     },
-    "timestamp": 1520287528
+    "timestamp": 1520295429
   }
 }
