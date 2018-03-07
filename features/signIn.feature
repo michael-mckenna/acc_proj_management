@@ -1,51 +1,25 @@
-Feature: Sign in
-    User should not be signed in until button has been pressed
-    User should not be logged in until username or email and password are filled in
+Feature: Make sure functionality for sign in page works
+    If user is not signed in, sign in button should be present
+    If user is signed in, sign in button should not be present
+    User should be redirected when they click the sign in button
+    User should be signed in when they return to home page from authentication
 
-Background: User is on login page
+Scenario: Sign in button is present when user not signed in
+    Given the user is on the sign in page
+    When the user is not signed in
+    Then the sign in button should be present
 
-Scenario Outline: Sign in user
-    And I have entered valid <component> for sign in
-    When I press the sign in button
-    Then I should be logged in
+Scenario: Sign in button is not present when user signed in
+    Given the user is on the sign in page
+    When the user is signed in
+    Then the sign in button is hidden
 
-    Examples:
-    | component |
-    | username |
-    | password |
+Scenario: User should be redirected when sign in button is clicked
+    Given the user is on the sign in page
+    When the user clicks the sign in button
+    Then the user is redirected to Google's authentication
 
-Scenario: Show error for blank username
-    And I have entered valid password for sign in
-    And I have not entered username for sign in
-    When I press the sign in button
-    Then an error about the username should pop up for sign in
-
-Scenario: Show error for blank email
-    And I have entered valid password for sign in
-    And I have not entered email for sign in
-    When I press the sign in button
-    Then an error about the email should pop up for sign in
-
-Scenario: Show error for blank password
-    And I have entered valid username for sign in
-    And I have not entered password for sign in
-    When I press the sign in button
-    Then an error about the password should pop up for sign in
-
-Scenario: Show error for invalid username
-    And I have entered valid password for sign in
-    And I have not entered valid username for sign in
-    When I press the sign in button
-    Then an error about the valid username should pop up for sign in
-
-Scenario: Show error for invalid email
-    And I have entered valid password for sign in
-    And I have not entered valid email for sign in
-    When I press the sign in button
-    Then an error about the valid email should pop up for sign in
-
-Scenario: Show error for invalid password
-    And I have entered valid username for sign in
-    And I have not entered valid password for sign in
-    When I press the sign in button
-    Then an error about the valid password should pop up for sign in
+Scenario: User should return to home page after redirected back from Google's authentication
+    Given the user has been redirected to Google's authentication
+    When the user has successfully finished authenticating
+    Then the user should return to the home page

@@ -93,5 +93,52 @@
       ]
     },
     "timestamp": 1520314248
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/justnp/acc_proj_management/features/step_definitions/signIn.rb": [
+        1,
+        null,
+        3,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1520385021
   }
 }
