@@ -37,12 +37,12 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Support database association
 gem 'shoulda'
 
-# Support responsive UI 
+# Support responsive UI
 gem 'materialize-sass', '~> 1.0.0.alpha4'
 # Support Google Authentication
 gem "omniauth-google-oauth2"
 
- 
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,7 +50,8 @@ group :development, :test do
   # Testing framework
   gem 'rspec-rails'
   # UI testing
-  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 group :development do

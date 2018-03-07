@@ -9,11 +9,6 @@ Scenario: Sign in button is present when user not signed in
     When the user is not signed in
     Then the sign in button should be present
 
-Scenario: Sign in button is not present when user signed in
-    Given the user is on the sign in page
-    When the user is signed in
-    Then the sign in button is hidden
-
 Scenario: User should be redirected when sign in button is clicked
     Given the user is on the sign in page
     When the user clicks the sign in button
