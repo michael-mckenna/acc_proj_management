@@ -1,82 +1,41 @@
-#############################################
-############### Valid Sign Up ###############
-#############################################
-
-# Step definitions for valid login
-And("I have entered valid username for sign in") do
-    @validLogin.validFormField(@currUser, "sign in", "username")
+Given("the user is on the sign in page") do
+    visit 'https://acc-project-management.herokuapp.com/'
+    page.current_url == 'https://acc-project-management.herokuapp.com/#'
 end
 
-And("I have entered valid password for sign in") do
-    @validLogin.validFormField(@currUser, "sign in", "password")
+Given("the user has been redirected to Google's authentication") do
+    # visit 'https://acc-project-management.herokuapp.com/auth/google_oauth2'
+    page.current_url != 'https://acc-project-management.herokuapp.com/#'
+    page.current_url != 'https://acc-project-management.herokuapp.com'
 end
 
-When("I press the sign in button") do
-    @validLogin.signIn = true
+When("the user is signed in") do
+    page.should have_content("Signed in as")
+    page.should have_content("Sign out")
 end
 
-Then("I should be logged in") do
-    @validLogin.login()
+When("the user is not signed in") do
+    page.should have_no_content("Signed in as")
+    page.should have_no_content("Sign out")
 end
 
-#############################################
-############### Blank Fields ################
-#############################################
-
-# Step definitions for blank username
-And("I have not entered username for sign in") do
-    @blankUsername.blankFormField(@currUser, "sign in", "username")
+When("the user clicks the sign in button") do
+    find('.btn').click
 end
 
-Then("an error about the username should pop up for sign in") do
-    @blankUsername.showFormError(@currUser, "sign in", "username")
+When("the user has successfully finished authenticating") do
+    page.current_url == 'https://acc-project-management.herokuapp.com/#'
 end
 
-# Step definitions for blank email
-And("I have not entered email for sign in") do
-    @blankEmail.blankFormField(@currUser, "sign in", "email")
+Then("the sign in button should be present") do
+    expect(page).to have_selector('.btn', visible: true)
 end
 
-Then("an error about the email should pop up for sign in") do
-    @blankEmail.showFormError(@currUser, "sign in", "email")
+Then("the user is redirected to Google's authentication") do
+    page.current_url != 'https://acc-project-management.herokuapp.com/#'
+    page.current_url != 'https://acc-project-management.herokuapp.com'
 end
 
-# Step definitions for blank password
-And("I have not entered password for sign in") do
-    @blankUsername.blankFormField(@currUser, "sign in", "password")
-end
-
-Then("an error about the password should pop up for sign in") do
-    @blankPassword.showFormError(@currUser, "sign in", "password")
-end
-
-#############################################
-############# Incorrect Fields ##############
-#############################################
-
-# Step definitions for invalid username
-And("I have not entered valid username for sign in") do
-    @invalidUsername.invalidFormField(@currUser, "sign in", "username")
-end
-
-Then("an error about the valid username should pop up for sign in") do
-    @invalidUsername.showFormError(@currUser, "invalid username")
-end
-
-# Step definitions for invalid email
-And("I have not entered valid email for sign in") do
-    @invalidEmail.invalidFormField(@currUser, "sign in", "email")
-end
-
-Then("an error about the valid email should pop up for sign in") do
-    @invalidEmail.showFormError(@currUser, "invalid email")
-end
-
-# Step definitions for invalid password
-And("I have not entered valid password for sign in") do
-    @invalidPassword.invalidFormField(@currUser, "sign in", "password")
-end
-
-Then("an error about the valid password should pop up for sign in") do
-    @invalidPassword.showFormError(@currUser, "invalid password")
+Then("the user should return to the home page") do
+    page.current_url == 'https://acc-project-management.herokuapp.com/#'
 end
