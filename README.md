@@ -37,5 +37,13 @@ Lastly, this app will allow members to join projects on their own accord. Since 
 2. `rake db:migrate`
 3. `rails s` to start server or `rake` to run test suite
 
+## Testing
+
+### Cucumber 
+`rake cucumber`
+
+### Rspec
+`rspec spec`
+
 ## Dependencies
 TODO
