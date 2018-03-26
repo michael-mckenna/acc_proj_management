@@ -1,7 +1,8 @@
+
 RSpec.describe ProjectsController do
     describe "GET #index" do
         it "populates an array of projects" do
-            project = Factory(:project)
+            project = FactoryBot.create(:project)
             get :index
             assigns(:projects).should eq([project])
         end
@@ -14,13 +15,14 @@ RSpec.describe ProjectsController do
       
     describe "GET #show" do
         it "assigns the requested project to @projects" do 
-            project = Factory(:project)
-            get :show, id: project
+            project = FactoryBot.create(:project)
+            get :show, params: { id: project.id }
             assigns(:project).should eq(project)
         end
 
         it "renders the :show template" do
-            get :show, id: Factory(:contact)
+            project = FactoryBot.create(:project)
+            get :show, params: { id: project.id }
             response.should render_template :show
         end
     end

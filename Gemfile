@@ -56,6 +56,9 @@ group :development, :test do
   # UI testing
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  # Data generation
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do

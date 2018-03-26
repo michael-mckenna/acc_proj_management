@@ -21,11 +21,6 @@ RSpec.describe Project, type: :model do
     expect(is_finished).to eq false
   end 
 
-  it 'raises ConstraintException' do
-    # Verify - must have non null name field
-    expect{ Project.create() }.to raise_error()
-  end 
-
   it 'should have many users' do
   	# Set up
   	expect(@project).to have_and_belong_to_many(:users)
