@@ -38,7 +38,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'shoulda'
 
 # Support responsive UI
-gem 'materialize-sass', '~> 1.0.0.alpha4'
+gem 'jquery-rails'
+gem 'bootstrap',     '~> 4.0.0'
+gem 'material-sass', '~> 4.0.0'
+# Font-awesome for icons
+gem 'font-awesome-sass', '~> 5.0', '>= 5.0.6.2'
 # Support Google Authentication
 gem "omniauth-google-oauth2"
 
