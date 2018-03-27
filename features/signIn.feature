@@ -14,7 +14,7 @@ Scenario: User should be redirected when sign in button is clicked
     When the user clicks the sign in button
     Then the user is redirected to Google's authentication
 
-Scenario: User should return to home page after redirected back from Google's authentication
+Scenario: User should go to user page after redirected back from Google's authentication
     Given the user has been redirected to Google's authentication
     When the user has successfully finished authenticating
-    Then the user should return to the home page
+    Then the user should return to user page

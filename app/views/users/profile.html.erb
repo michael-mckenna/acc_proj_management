@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACC Project Management</title>
+</head>
+<body>
+
+	<%= render 'layouts/navigation' %>
+
+	<div class="container">
+		<div id="user_profile">
+			<div class="row">
+				<div class="col-12 col-md-4"><i class="fas fa-user fa-10x" id="user_image"></i></div>
+				<div class="col-md-8">
+					<div id="user_info">
+						<h3>Profile</h3>
+						<ul>
+							<li>Name: 
+								<% if current_user %>
+									<%= current_user.name %>
+								<% end %>
+							</li>
+							<li>Admin Status: </li>
+							<li>Projects: </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
