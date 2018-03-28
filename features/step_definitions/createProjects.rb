@@ -1,6 +1,6 @@
 Given("the user is creating a project") do
     visit 'https://acc-project-management.herokuapp.com/projects/new'
-    page.should have_content("Create a new project")
+    page.should have_content("Add New Project")
 end
 
 When("the name field is filled out") do
@@ -8,7 +8,7 @@ When("the name field is filled out") do
 end
 
 And("the description field is filled out") do
-    page.should_not have_field("Description", :with => "")
+    page.should_not have_field("Description", :with => " ")
 end
 
 And("the create project button has been clicked") do

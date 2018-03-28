@@ -132,3 +132,58 @@ p {
     margin-bottom: 5%;
     float: right;
 }
+
+#limiter {
+  width: 100%;
+  margin: 0 auto;
+   background-color: #808080;
+    background-size: cover;
+    background-position: center;
+     background-attachment: fixed;
+}
+
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+    height: 100vh;
+   
+}
+
+.wrap-login100 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  position: relative;
+  filter: alpha(opacity=225);
+  align-items: center;
+  justify-content: center;
+}
+
+#add_projects_header {
+    padding-top: 15px;
+    text-align: center;
+    color: rgb(255,255,255);
+}
+
+.btn-primary {
+    background: #4CAF50;
+    color: rgb(0,0,0);
+}
+
+.container-form{
+    padding-top: 45px;
+    padding-left: 15px;
+}
+
+.control-label{
+    color: #000000;
+}
