@@ -8,8 +8,3 @@ Scenario: Project should show in listed projects
     Given the user is on project list page
     When a project is created
     Then project should show in listed projects
-
-Scenario: Project shows description when clicked on
-    Given the user is on project list page
-    When a project title is clicked on
-    Then project description should be toggled
