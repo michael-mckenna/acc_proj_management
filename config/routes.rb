@@ -17,6 +17,6 @@ AccProjManagement::Application.routes.draw do
 
   root to: "home#show"
   get 'profile', to: 'users#profile'
-
+  get 'management', to: 'users#management'
 end
 

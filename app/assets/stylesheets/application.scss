@@ -85,17 +85,12 @@ p {
 	transition: 0.3s ease;
 }
 
-// USER - PROFILE PAGE
-#temp {
-    color: #000;
-    float: right;
-    margin-top: 30px;
-}
-
+// NAVIGATION BAR
 .bg-dark {
     background-color: rgb(36,41,46) !important;
 }
 
+// USER - PROFILE PAGE
 #user_profile {
     margin-top: 10%;
 }
@@ -106,7 +101,6 @@ p {
 
 #user_profile li {
     list-style-type: none;
-    font-weight: bold;
 }
 
 #user_image {

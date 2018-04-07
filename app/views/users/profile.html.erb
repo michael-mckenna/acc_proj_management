@@ -13,14 +13,20 @@
 				<div class="col-12 col-md-4"><i class="fas fa-user fa-10x" id="user_image"></i></div>
 				<div class="col-md-8">
 					<div id="user_info">
-						<h3>Profile</h3>
+						<h3><strong>Profile</strong></h3>
 						<ul>
 							<li>Name: 
 								<% if current_user %>
 									<%= current_user.name %>
 								<% end %>
 							</li>
-							<li>Admin Status: </li>
+							<li>Status: 
+								<% if current_user.is_admin %>
+									Admin
+								<% else %>
+									Member
+								<% end %>
+							</li>
 							<li>Projects: </li>
 						</ul>
 					</div>

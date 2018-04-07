@@ -4,4 +4,9 @@ class UsersController < ApplicationController
 
 	end
 
+	# For Admin Only
+	def management
+
+	end
+
 end
