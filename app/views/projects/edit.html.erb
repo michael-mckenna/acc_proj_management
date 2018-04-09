@@ -1,0 +1,53 @@
+<%= form_for [@user,@project], :html => { :class => "form-horizontal project" } do |f| %>
+
+  <% if @project.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @project.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  <div class="container-form">
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div> 
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_area :description, :class => 'form-control' %>
+    </div>
+  </div>
+  
+  <% if current_user.is_admin %>
+	  <div class="field">
+	    <%= f.label :Accept %><br />
+	    <%= f.label :is_accepted, "Yes", :value => true  %>
+	    <%= f.radio_button :is_accepted, true %>
+	    <%= f.label :is_accepted, "No", :value => false %>
+	    <%= f.radio_button :is_accepted, false, :checked => true %>
+	  </div>
+  <% end %>
+
+  <br />
+  <%= f.hidden_field :user_id, value: params[:user_id], :class => 'form-control' %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                projects_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+</div>
+
+<% end %>

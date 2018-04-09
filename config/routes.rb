@@ -18,5 +18,6 @@ AccProjManagement::Application.routes.draw do
   root to: "home#show"
   get 'profile', to: 'users#show'
   get 'admin', to: 'users#admin'
+
 end
 

@@ -7,7 +7,16 @@
 
 	<%= render 'layouts/navigation' %>
 
-	<h1>Project Managemet Page -- TODO</h1>
+	<h3>Statistics:</h3>
+	<p>Members: <%= User.count %></p>
+	<p>Projects: <%= Project.count %></p>
+
+	<h3>Notifications:</h3>
+	<% @projects.each do |project| %>
+		<div>
+			<%= link_to project.name, edit_project_path(project) %>
+		</div>
+	<% end %>
 
 </body>
 </html>
