@@ -35,6 +35,8 @@ class UsersController < ApplicationController
 		@projects = Project.where(:is_accepted => false)
 	end
 
+
+
 	private
 		def user_params
 			params.require(:user).permit(:is_admin)
