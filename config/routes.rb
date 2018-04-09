@@ -16,7 +16,7 @@ AccProjManagement::Application.routes.draw do
   resources :projects
 
   root to: "home#show"
-  get 'profile', to: 'users#profile'
-  get 'management', to: 'users#management'
+  get 'profile', to: 'users#show'
+  get 'admin', to: 'users#admin'
 end
 

@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
 	
-	def profile
+	def show
 
 	end
 
 	# For Admin Only
-	def management
+	def admin
 
 	end
 
