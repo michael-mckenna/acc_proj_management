@@ -7,9 +7,13 @@
 		<%= form_for user do |f| %>
 	      <div class="form-group">
 	        <div class="col-lg-offset-2 col-lg-10">
-		      <%= f.hidden_field :is_admin, value: true, :class => 'form-control' %>
+		      
 		      <% if !user.is_admin %>
+		      	  <%= f.hidden_field :is_admin, value: true, :class => 'form-control' %>
 		          <%= f.submit 'Make Admin', :class => 'btn btn-primary' %>
+		      <% else %>
+		          <%= f.hidden_field :is_admin, value: false, :class => 'form-control' %>
+		          <%= f.submit 'Revoke Admin Status', :class => 'btn btn-warning' %>
 	          <% end %>
 	          <%= link_to 'Delete User', user_path(user), method: :delete, 
 	                                            data: { confirm: "Are you sure you want to delete this user?" }, 
