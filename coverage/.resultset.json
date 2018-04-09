@@ -1,25 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/helpers/application_helper.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/helpers/home_helper.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/helpers/sessions_helper.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/home_controller.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/application_controller.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -29,7 +29,7 @@
         null,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/projects_controller.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/controllers/projects_controller.rb": [
         1,
         null,
         1,
@@ -82,7 +82,7 @@
         null,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/sessions_controller.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/controllers/sessions_controller.rb": [
         1,
         1,
         1,
@@ -96,7 +96,16 @@
         null,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/models/project.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/models/project.rb": [
         1,
         1,
         1,
@@ -104,12 +113,12 @@
         1,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/models/application_record.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/models/user.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/models/user.rb": [
         1,
         1,
         null,
@@ -125,39 +134,30 @@
         null,
         null
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/channels/application_cable/channel.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/channels/application_cable/connection.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/controllers/users_controller.rb": [
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        0
-      ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/home/mtp426/workspace/RUBY/acc_proj_management/app/mailers/application_mailer.rb": [
+      "/Users/michaelmckenna/Coding/Rails/acc_proj_management/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1522210495
+    "timestamp": 1523305781
   },
   "Cucumber Features": {
     "coverage": {
