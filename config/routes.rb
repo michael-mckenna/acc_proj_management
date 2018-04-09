@@ -14,9 +14,9 @@ AccProjManagement::Application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   resource :home, only: [:show]
   resources :projects
+  resources :users, except: [:new, :create]
 
   root to: "home#show"
-  get 'profile', to: 'users#show'
   get 'admin', to: 'users#admin'
 
 end

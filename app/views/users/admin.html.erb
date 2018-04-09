@@ -9,6 +9,7 @@
 
 	<h3>Statistics:</h3>
 	<p>Members: <%= User.count %></p>
+	<p>Admin: <%= User.where(:is_admin => true).count %></p>
 	<p>Projects: <%= Project.count %></p>
 
 	<h3>Notifications:</h3>
@@ -17,6 +18,8 @@
 			<%= link_to project.name, edit_project_path(project) %>
 		</div>
 	<% end %>
+
+	<%= link_to 'Members Directory', users_path, class: "btn btn-primary" %>
 
 </body>
 </html>
