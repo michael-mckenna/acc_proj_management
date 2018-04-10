@@ -181,3 +181,44 @@ html {
 .control-label{
     color: #000000;
 }
+
+.col-sm-4 {
+  background: white;
+  padding: 1%;
+  border-style: solid;
+  margin-bottom: 3%;
+}
+.col-sm-3{
+    position: absolute;
+    right: 350px;
+    top: 210px;
+    background: white;
+  padding: 2%;
+  border-style: solid;
+}
+
+#notif_heading{
+     position: absolute;
+    right: 510px;
+    top: 170px;
+}
+
+#notif_heading{
+     position: absolute;
+    top: 170px;
+}
+
+#member-button{
+    position: absolute;
+    top: 430px;
+    left: 210px;
+}
+    
+#member_list{
+     position: absolute;
+    left: 570px;
+    top: 160px;
+    background: white;
+  padding: 2%;
+  border-style: solid;
+}    
