@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 	
 	def index 
-		@projects = Project.where(:is_accepted => true)
+		@projects = Project.all
 	end
 
 	def new
@@ -44,10 +44,8 @@ class ProjectsController < ApplicationController
 		redirect_to projects_path
 	end
 
-
 	private
 		def project_params
-			params.require(:project).permit(:name, :description, :is_accepted)
+			params.require(:project).permit(:name, :description)
 		end
-		
 end

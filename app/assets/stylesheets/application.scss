@@ -30,7 +30,7 @@ html {
     background-attachment: fixed;
 }
 
-#disclaimer {
+p {
     color: white;
 }
 
@@ -85,12 +85,17 @@ html {
 	transition: 0.3s ease;
 }
 
-// NAVIGATION BAR
+// USER - PROFILE PAGE
+#temp {
+    color: #000;
+    float: right;
+    margin-top: 30px;
+}
+
 .bg-dark {
     background-color: rgb(36,41,46) !important;
 }
 
-// USER - PROFILE PAGE
 #user_profile {
     margin-top: 10%;
 }
@@ -101,6 +106,7 @@ html {
 
 #user_profile li {
     list-style-type: none;
+    font-weight: bold;
 }
 
 #user_image {
@@ -130,7 +136,7 @@ html {
 #limiter {
   width: 100%;
   margin: 0 auto;
-   background: white;
+   background-color: #808080;
     background-size: cover;
     background-position: center;
      background-attachment: fixed;
@@ -154,20 +160,18 @@ html {
 .wrap-login100 {
   width: 400px;
   height: 400px;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
   position: relative;
+  filter: alpha(opacity=225);
   align-items: center;
   justify-content: center;
-  border-style: solid;
 }
 
 #add_projects_header {
-    position: absolute;
-    right: 590px;
-    top: 130px;
+    padding-top: 15px;
     text-align: center;
-    color: rgb(36,41,46);
+    color: rgb(255,255,255);
 }
 
 .btn-primary {
@@ -183,44 +187,3 @@ html {
 .control-label{
     color: #000000;
 }
-
-.col-sm-4 {
-  background: white;
-  padding: 1%;
-  border-style: solid;
-  margin-bottom: 3%;
-}
-.col-sm-3{
-    position: absolute;
-    right: 350px;
-    top: 210px;
-    background: white;
-  padding: 2%;
-  border-style: solid;
-}
-
-#notif_heading{
-     position: absolute;
-    right: 510px;
-    top: 170px;
-}
-
-#notif_heading{
-     position: absolute;
-    top: 170px;
-}
-
-#member-button{
-    position: absolute;
-    top: 430px;
-    left: 210px;
-}
-    
-#member_list{
-     position: absolute;
-    left: 570px;
-    top: 160px;
-    background: white;
-  padding: 2%;
-  border-style: solid;
-}    
