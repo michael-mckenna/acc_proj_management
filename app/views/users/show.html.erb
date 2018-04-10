@@ -19,7 +19,7 @@
 								<%= @user.name %>
 							</li>
 							<li>Status: 
-								<% if current_user.is_admin %>
+								<% if @user.is_admin %>
 									Admin
 								<% else %>
 									Member
