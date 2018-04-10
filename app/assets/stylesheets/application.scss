@@ -130,7 +130,7 @@ html {
 #limiter {
   width: 100%;
   margin: 0 auto;
-   background-color: #808080;
+   background: white;
     background-size: cover;
     background-position: center;
      background-attachment: fixed;
@@ -154,18 +154,20 @@ html {
 .wrap-login100 {
   width: 400px;
   height: 400px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background: white;
   border-radius: 10px;
   position: relative;
-  filter: alpha(opacity=225);
   align-items: center;
   justify-content: center;
+  border-style: solid;
 }
 
 #add_projects_header {
-    padding-top: 15px;
+    position: absolute;
+    right: 590px;
+    top: 130px;
     text-align: center;
-    color: rgb(255,255,255);
+    color: rgb(36,41,46);
 }
 
 .btn-primary {
