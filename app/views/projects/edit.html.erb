@@ -1,5 +1,8 @@
 <%= form_for [@user,@project], :html => { :class => "form-horizontal project" } do |f| %>
-
+  
+  <% if current_user.is_admin %>
+     <%= render 'layouts/navigation' %>
+  <% end %>   
   <% if @project.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
@@ -14,6 +17,8 @@
       </div>
     </div>
   <% end %>
+  <div class="container">
+    <h1 id="available_projects_header">Project Proposal</h1>
   <div class="container-form">
     <div class="form-group">
       <%= f.label :name, :class => 'control-label col-md-2' %>
@@ -44,6 +49,7 @@
         </div>
       </div>
     <% end %>
+  </div>
   </div>
 
 <% end %>
