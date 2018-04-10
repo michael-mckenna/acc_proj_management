@@ -3,7 +3,7 @@ Given("the user is on the member listing page") do
     page.should have_content("Member Listing")
 end
 
-When("a user in the list is not an admin") do
+When("a user in the list is not an admin, click button to make them an admin") do
     page.should have_content("Make Admin")
     click_button("Make Admin")
 end
@@ -13,7 +13,7 @@ Then("a user in list becomes admin") do
     expect(page).to have_content("Revoke Admin Status")
 end
 
-When("a user in the list is an admin") do 
+When("a user in the list is an admin, click button to make them a non-admin") do 
     page.should have_content("Revoke Admin Status")
     click_button("Make Admin")
 end
