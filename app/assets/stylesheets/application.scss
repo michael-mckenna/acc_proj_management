@@ -164,11 +164,15 @@ html {
 #add_projects_header {
     background-color: #2c3e50;
     color: rgb(255,255,255);
-    padding-left: 3%;
+    padding-left: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-bottom: 5%;
     font-size: 200%;
+}
+
+#add_project_form {
+  padding: 0 2%;
 }
 
 .panel.panel-danger {
@@ -242,5 +246,19 @@ html {
   margin-bottom: 5%;
 }
 
+// EDIT PROJECT PAGE
+#edit_proj_form_container {
+  width: 80%;
+  margin: 0 auto;
+}
 
+#edit_form_textarea {
+  margin-bottom: 3%;
+}
+
+#accept_proj_btn,
+#reject_proj_btn,
+#cancel_proj_proposal_btn {
+  margin-bottom: 3%;
+}
 
