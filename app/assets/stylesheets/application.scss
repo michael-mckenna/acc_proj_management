@@ -114,8 +114,42 @@ html {
     padding: 10px;
 }
 
-// USER - DISPLAY PROJECTS PAGE
+// DISPLAY PROJECTS PAGE
+#accordion .btn-link {
+    color: #4E91FC;
+}
 
+#available_projects_header {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#add_proj_btn {
+    margin-top: 2%;
+    float: right;
+}
+
+.card-body {
+  margin: 0 2%;
+}
+
+.mb-0 {
+  padding-bottom: 0;
+}
+
+#join_btn {
+  float: right;
+  margin: 2% 0;
+}
+
+.proj_icon {
+  margin-right: 5%;
+}
 
 
 
