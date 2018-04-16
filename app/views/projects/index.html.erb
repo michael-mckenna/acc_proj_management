@@ -2,6 +2,47 @@
 <html>
 <head>
 	<title>Show Projects</title>
+	<style type="text/css">
+		#accordion .btn-link {
+		    /*color: rgb(2,136,209);*/
+		    color: #4E91FC;
+		}
+
+		#available_projects_header {
+		    margin-top: 5%;
+		    margin-bottom: 5%;
+		    text-align: center;
+		    color: #2c3e50;
+	        text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                			0px 8px 13px rgba(0,0,0,0.1),
+                			0px 18px 23px rgba(0,0,0,0.1);
+		}
+
+		#add_proj_btn {
+		    margin-top: 2%;
+		    float: right;
+		}
+
+		.card-body {
+			margin: 0 2%;
+		}
+
+		.mb-0 {
+			padding-bottom: 0;
+		}
+
+		#join_btn {
+			float: right;
+			margin: 2% 0;
+		}
+
+		.proj_icon {
+			margin-right: 5%;
+		}
+
+
+
+	</style>
 </head>
 <body>
 	<%= render 'layouts/navigation' %>
@@ -19,8 +60,8 @@
 			    <div class="card">
 			      <div class="card-header" id=<%= proj_id %> >
 			        <h5 class="mb-0">
-			          <button class="btn btn-link" data-toggle="collapse" data-target=<%= proj_cls_hash %> aria-expanded="true" aria-controls=<%= proj_cls %> >
-			            <%= project.name %>
+			          <button class="btn btn-link" type="button" data-toggle="collapse" data-target=<%= proj_cls_hash %> aria-expanded="true" aria-controls=<%= proj_cls %> >
+			              <i class="fas fa-file proj_icon"></i> <%= project.name %>
 			          </button>
 			        </h5>
 			      </div>
@@ -28,13 +69,14 @@
 			      <div id=<%= proj_cls %> class="collapse" aria-labelledby=<%= proj_id %> data-parent="#accordion">
 			        <div class="card-body">
 			          <%= project.description %> 
+
+			          <%= form_for project do |f| %>
+				        <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
+				      	<%= f.submit 'Join', :class => 'btn btn-info', :id => 'join_btn' %>
+				      <% end %>
+
 			        </div>
 			      </div>
-
-			      <%= form_for project do |f| %>
-			        <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
-			      	<%= f.submit 'Join', :class => 'btn btn-primary' %>
-			      <% end %>
 
 			    </div>
 			<% end %>
@@ -42,7 +84,7 @@
 	</div>
 
   <div class="container">
-    <%= link_to '<i class="fa fa-plus"></i> Add New Project'.html_safe, new_project_path, class: "btn", id: "add_proj_btn" %>
+    <%= link_to '<i class="fa fa-plus"></i> Add New Project'.html_safe, new_project_path, class: "btn btn-success", id: "add_proj_btn" %>
   </div>
 
 </body>
