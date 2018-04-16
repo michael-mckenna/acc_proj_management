@@ -30,6 +30,12 @@
 			          <%= project.description %> 
 			        </div>
 			      </div>
+
+			      <%= form_for project do |f| %>
+			        <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
+			      	<%= f.submit 'Join', :class => 'btn btn-primary' %>
+			      <% end %>
+
 			    </div>
 			<% end %>
 	  	</div>

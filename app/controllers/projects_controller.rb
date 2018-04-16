@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 
 	def edit
 		@project = Project.find(params[:id])
+	
 	end
 
 	def create
@@ -24,6 +25,10 @@ class ProjectsController < ApplicationController
 
 	def update
 		@project = Project.find(params[:id])
+		@user    = User.find(current_user[:id])
+		if @user 
+           @project.users << @user
+		end
 		if @project.update(project_params)
 			flash[:success] = "Article was successfully updated"
 			redirect_to projects_path(@project)
