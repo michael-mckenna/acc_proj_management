@@ -1,3 +1,12 @@
+<style type="text/css">
+	#user_proj_display {
+		margin: 1% 2% 2% 5%;
+	}
+
+	#user_proj_display a {
+		color: #2c3e50;
+	}
+</style>
 <%= render 'layouts/navigation' %>
 
 <div class="container">
@@ -26,7 +35,11 @@
 
 						<div>
 							<div class="data_heading">Project:</div>
-
+							<ul id="user_proj_display">
+								<% @user.projects.each do |project| %>
+									<li> <%= link_to project.name, project_path(project) %> </li>
+								<% end %>
+							</ul>
 						</div>
 					</div>
 				</div>

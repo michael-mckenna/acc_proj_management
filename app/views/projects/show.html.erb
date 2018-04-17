@@ -1,0 +1,9 @@
+<%= render 'layouts/navigation' %>
+
+<div class="container">
+	<div id="show_proj_container">
+		<h1 id="show_proj_header"><%= @project.name %></h1>
+		<div id="show_proj_content"><%= @project.description %> </div>
+	</div>
+	<%= link_to 'Back to Home Page', user_path(current_user), :class => "btn btn-default", :id => "back_btn" %>
+</div>
