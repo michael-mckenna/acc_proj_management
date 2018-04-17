@@ -5,30 +5,30 @@
 </head>
 <body>
   
-  <%= form_for [@user,@project], :html => { :class => "form-horizontal project" } do |f| %>
+  <%= form_for [@project], :html => { :class => "form-horizontal project" } do |f| %>
     
     <% if current_user.is_admin %>
        <%= render 'layouts/navigation' %>
     <% end %> 
 
-    <% if @project.errors.any? %>
-      <div id="error_expl" class="panel panel-danger">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= pluralize(@project.errors.count, "error") %> occured </h3>
-        </div>
-        <div class="panel-body">
-          <ul>
-          <% @project.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      </div>
-    <% end %>
-
     <div class="container">
       <div id="edit_proj_form_container">
         <h1 id="proj_proposal_header">Project Proposal</h1>
+
+           <% if @project.errors.any? %>
+            <div id="error_expl" class="panel panel-danger">
+              <div class="panel-heading">
+                <h3 class="panel-title"><%= pluralize(@project.errors.count, "error") %> occured </h3>
+              </div>
+              <div class="panel-body">
+                <ul>
+                <% @project.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            </div>
+          <% end %>
         
         <div id="edit_proj_form">
           <div class="form-group">
