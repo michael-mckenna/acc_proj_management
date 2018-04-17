@@ -214,19 +214,19 @@ html {
 
 #proj_panel {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-bottom: 1px solid rgb(255,255,255);
-    background-color: rgb(255,255,255);
-    margin-right: 10%;
-    margin-bottom: 5%;
-    height: 520px;
-    overflow-y: scroll;
+  border-bottom: 1px solid rgb(255,255,255);
+  background-color: rgb(255,255,255);
+  margin-right: 10%;
+  margin-bottom: 5%;
+  height: 520px;
+  overflow-y: scroll;
 }
 
 #notif_heading {
   background-color: #2c3e50;
-    color: rgb(255,255,255);
-    padding-left: 5%;
-    margin-bottom: 5%;
+  color: rgb(255,255,255);
+  padding-left: 5%;
+  margin-bottom: 5%;
 }
 
 #projs_container {
@@ -248,8 +248,23 @@ html {
 
 // EDIT PROJECT PAGE
 #edit_proj_form_container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#proj_proposal_header {
+margin: 5% 0 3% 3%;
+padding-top: 3%;
+color: #2c3e50;
+text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#edit_proj_form {
+  margin: 0 1%;
 }
 
 #edit_form_textarea {
@@ -262,3 +277,38 @@ html {
   margin-bottom: 3%;
 }
 
+// MEMBER LISTING PAGE
+#member_listing_header {
+  margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.member_directory_info {
+  background-color: rgb(255,255,255);
+  margin: 0;
+  padding: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.user_name a {
+  color: #2c3e50;
+}
+
+.btns {
+  float: right;
+}
+
+.user_icon {
+  margin-right: 1%;
+}
+
+#make_admin_btn,
+#revoke_admin_btn,
+#delete_user_btn {
+  margin-bottom: 1%;
+} 
