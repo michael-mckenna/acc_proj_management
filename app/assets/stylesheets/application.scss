@@ -130,6 +130,18 @@ html {
   font-weight: bold;
 }
 
+#user_proj_display {
+  margin: 1% 2% 2% 5%;
+}
+
+#user_proj_display a {
+  color: #2c3e50;
+}
+
+.proj_display_link {
+  margin-bottom: 1%;
+}
+
 
 // DISPLAY PROJECTS PAGE
 #accordion .btn-link {
@@ -161,13 +173,18 @@ html {
   padding-bottom: 0;
 }
 
-#join_btn {
-  float: right;
-  margin: 2% 0;
-}
-
 .proj_icon {
   margin-right: 5%;
+}
+
+#delete_proj_btn {
+  float: right;
+  margin: 2% 1%;
+}
+
+#join_proj_btn {
+  float: right;
+  margin: 2% 0;
 }
 
 // ADD NEW PROJECT PAGE

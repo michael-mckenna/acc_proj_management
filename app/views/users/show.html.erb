@@ -1,12 +1,3 @@
-<style type="text/css">
-	#user_proj_display {
-		margin: 1% 2% 2% 5%;
-	}
-
-	#user_proj_display a {
-		color: #2c3e50;
-	}
-</style>
 <%= render 'layouts/navigation' %>
 
 <div class="container">
@@ -37,7 +28,19 @@
 							<div class="data_heading">Project:</div>
 							<ul id="user_proj_display">
 								<% @user.projects.each do |project| %>
-									<li> <%= link_to project.name, project_path(project) %> </li>
+									<div class="proj_display_link">
+									<div class="row">
+										<div class="col-sm-12 col-lg-8">
+											<li> <%= link_to project.name, project_path(project) %> </li>
+										</div>
+										<div class="col-sm-12 col-lg-4">
+											<%= form_for :project, :url => {:controller => "projects", :action => "leave", :id => project} do |f| %>
+										      <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
+										      <%= f.submit 'Leave Project', :class => 'btn btn-danger', :id => 'leave_proj_btn' %>
+										    <% end %>
+										</div>
+								    </div>
+								    </div>
 								<% end %>
 							</ul>
 						</div>

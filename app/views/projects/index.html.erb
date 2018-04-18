@@ -22,12 +22,21 @@
 		      <div id=<%= proj_cls %> class="collapse" aria-labelledby=<%= proj_id %> data-parent="#accordion">
 		        <div class="card-body">
 		          <%= project.description %> 
+		          <div>
+		          	  <% if current_user.is_admin %> 
+					      <%= link_to 'Delete Project', project_path(project), method: :delete, 
+		                                                data: { confirm: "Are you sure you want to delete this project?" }, 
+		                                                :class => "btn btn-danger", :id => 'delete_proj_btn' %>
+	                  <% end %>
 
-		          <%= form_for project do |f| %>
-			        <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
-			      	<%= f.submit 'Join', :class => 'btn btn-info', :id => 'join_btn' %>
-			      <% end %>
+	                  <% if !current_user.projects.include?(project) %>
+				          <%= form_for :project, :url => {:action => "join", :id => project} do |f| %>
+					        <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
+					      	<%= f.submit 'Join Project', :class => 'btn btn-info', :id => 'join_proj_btn' %>
+					      <% end %>
+				      <% end %>
 
+                  </div>
 		        </div>
 		      </div>
 
