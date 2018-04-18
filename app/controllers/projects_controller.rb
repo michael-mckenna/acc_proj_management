@@ -25,10 +25,6 @@ class ProjectsController < ApplicationController
 
 	def update
 		@project = Project.find(params[:id])
-		@user    = User.find(current_user[:id])
-		if @user 
-           @project.users << @user
-		end
 		if @project.update(project_params)
 			flash[:success] = "Article was successfully updated"
 			redirect_to projects_path(@project)
@@ -47,6 +43,24 @@ class ProjectsController < ApplicationController
 		@project.destroy
 		flash[:danger] = "Article was successfully deleted"
 		redirect_to projects_path
+	end
+
+	def join
+		@project = Project.find(params[:id])
+		@user = User.find(current_user[:id])
+		if @user 
+           @project.users << @user
+		end
+		redirect_to user_path(@user)
+	end
+
+	def leave
+		@project = Project.find(params[:id])
+		@user = User.find(current_user[:id])
+		if @user 
+           @user.projects.delete(@project)
+		end
+		redirect_to user_path(@user)
 	end
 
 

@@ -10,9 +10,10 @@
 }
 
 body {
-	font-family: 'Lato', 'Arial', sans-serif;
+  	font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
+    background-color: #ecf0f1;
 }
 
 html {
@@ -53,8 +54,6 @@ html {
     font-weight: 400;
     word-spacing: 4px;
     letter-spacing: 1px;
-    text-transform: uppercase;
-
     text-shadow:    0px 4px 3px rgba(0,0,0,0.4),
                     0px 8px 13px rgba(0,0,0,0.1),
                     0px 18px 23px rgba(0,0,0,0.1);
@@ -87,140 +86,301 @@ html {
 
 // NAVIGATION BAR
 .bg-dark {
-    background-color: rgb(36,41,46) !important;
+    background-color: #2c3e50 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
 
 // USER - PROFILE PAGE
 #user_profile {
-    margin-top: 10%;
-}
-
-#user_profile ul {
-    padding: 0;
-}
-
-#user_profile li {
-    list-style-type: none;
+    margin-top: 5%;
 }
 
 #user_image {
-    margin: 0 30% 10% 30%;
-    border: 2px solid #000;
-    padding: 10px;
+    margin-bottom: 10%;
+    color: #0C1F49;
+    border: 2px solid #2c3e50;
+    padding: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-// USER - DISPLAY PROJECTS PAGE
+#user_info_container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(255,255,255);
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+#user_info_heading {
+  background-color: #2c3e50;
+  color: rgb(255,255,255);
+  padding-left: 3%;
+  margin-bottom: 5%;
+}
+
+#user_info_contents {
+  padding-left: 3%;
+}
+
+.data_heading {
+  font-weight: bold;
+}
+
+#user_proj_display {
+  margin: 1% 2% 2% 5%;
+}
+
+#user_proj_display a {
+  color: #2c3e50;
+}
+
+.proj_display_link {
+  margin-bottom: 1%;
+}
+
+
+// DISPLAY PROJECTS PAGE
 #accordion .btn-link {
-    color: rgb(2,136,209);
+    color: #2C3E50;
 }
 
 #available_projects_header {
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-align: center;
-    color: rgb(36,41,46);
+    color: #2c3e50;
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
 }
 
 #add_proj_btn {
-    margin-top: 3%;
-    margin-bottom: 5%;
-    float: right;
+  margin-top: 2%;
+  float: right;
+  margin-bottom: 5%;
+  background-color: #173664;
 }
 
-#limiter {
-  width: 100%;
+.card-body {
+  margin: 0 2%;
+}
+
+.mb-0 {
+  padding-bottom: 0;
+}
+
+.proj_icon {
+  margin-right: 5%;
+}
+
+#delete_proj_btn {
+  float: right;
+  margin: 2% 1%;
+}
+
+#join_proj_btn {
+  float: right;
+  margin: 2% 0;
+}
+
+// ADD NEW PROJECT PAGE
+#add_project_container {
+  width: 55%;
   margin: 0 auto;
-   background: white;
-    background-size: cover;
-    background-position: center;
-     background-attachment: fixed;
-}
-
-.container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-    height: 100vh;
-   
-}
-
-.wrap-login100 {
-  width: 400px;
-  height: 400px;
-  background: white;
-  border-radius: 10px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  border-style: solid;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 2px solid rgb(255,255,255);
+  background-color: rgb(255,255,255);
 }
 
 #add_projects_header {
-    position: absolute;
-    right: 590px;
-    top: 130px;
-    text-align: center;
-    color: rgb(36,41,46);
+    background-color: #2c3e50;
+    color: rgb(255,255,255);
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+    font-size: 200%;
 }
 
-.btn-primary {
-    background: #4CAF50;
-    color: rgb(0,0,0);
+#add_project_form {
+  padding: 0 2%;
 }
 
-.container-form{
-    padding-top: 45px;
-    padding-left: 15px;
+.panel.panel-danger {
+  margin-left: 5%;
 }
 
-.control-label{
-    color: #000000;
-}
-
-.col-sm-4 {
-  background: white;
-  padding: 1%;
-  border-style: solid;
+#create_proj_btn, #cancel_create_proj_btn {
+  margin-top: 3%;
   margin-bottom: 3%;
 }
-.col-sm-3{
-    position: absolute;
-    right: 350px;
-    top: 210px;
-    background: white;
+
+
+// ADMIN PAGE
+#admin_info_container {
+  margin-top: 5%;
+}
+
+#stat_panel {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgb(255,255,255);
+  background-color: rgb(255,255,255);
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+#stat_heading {
+  background-color: #2c3e50;
+  color: rgb(255,255,255);
+  padding-left: 5%;
+  margin-bottom: 5%;
+}
+
+#stat_container {
+  padding-left: 5%;
+}
+
+#proj_panel {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 1px solid rgb(255,255,255);
+  background-color: rgb(255,255,255);
+  margin-right: 10%;
+  margin-bottom: 5%;
+  height: 520px;
+  overflow-y: scroll;
+}
+
+#notif_heading {
+  background-color: #2c3e50;
+  color: rgb(255,255,255);
+  padding-left: 5%;
+  margin-bottom: 5%;
+}
+
+#projs_container {
+  padding-left: 5%;
+}
+
+#projs_container a {
+  color: #2c3e50;
+}
+
+.proj_specific_info {
+  margin: 1% 0;
+}
+
+#member_directory_btn {
+  background-color: #173664;
+  margin-bottom: 5%;
+}
+
+// EDIT PROJECT PAGE
+#edit_proj_form_container {
+  width: 90%;
+  margin: 0 auto 5% auto;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#proj_proposal_header {
+margin: 5% 0 3% 3%;
+padding-top: 3%;
+color: #2c3e50;
+text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#edit_proj_form {
+  margin: 0 1%;
+}
+
+#edit_form_textarea {
+  margin-bottom: 3%;
+}
+
+#accept_proj_btn,
+#reject_proj_btn,
+#cancel_proj_proposal_btn {
+  margin-bottom: 3%;
+}
+
+// MEMBER LISTING PAGE
+#member_listing_header {
+  margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow:    0px 4px 3px rgba(0,0,0,0.2),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.member_directory_info {
+  background-color: rgb(255,255,255);
+  margin: 0;
   padding: 2%;
-  border-style: solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#notif_heading{
-     position: absolute;
-    right: 510px;
-    top: 170px;
+.user_name a {
+  color: #2c3e50;
 }
 
-#notif_heading{
-     position: absolute;
-    top: 170px;
+.btns {
+  float: right;
 }
 
-#member-button{
-    position: absolute;
-    top: 430px;
-    left: 210px;
+.user_icon {
+  margin-right: 1%;
 }
-    
-#member_list{
-     position: absolute;
-    left: 570px;
-    top: 160px;
-    background: white;
-  padding: 2%;
-  border-style: solid;
-}    
+
+#make_admin_btn,
+#revoke_admin_btn,
+#delete_user_btn {
+  margin-bottom: 1%;
+}
+
+#revoke_admin_btn {
+  background-color: #173664;
+  color: rgb(255,255,255);
+} 
+
+// SHOW INDIVIDUAL PROJECT PAGE
+#show_proj_container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 2px solid rgb(255,255,255);
+  background-color: rgb(255,255,255);
+}
+
+#show_proj_header {
+  background-color: #2c3e50;
+    color: rgb(255,255,255);
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+    font-size: 150%;
+}
+
+#show_proj_content {
+  padding: 0 2%;
+  margin-bottom: 5%;
+}
+
+#back_btn {
+  margin-right: 10%;
+  background-color: #173664;
+  color: rgb(255,255,255);
+  float: right;
+}

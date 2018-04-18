@@ -18,6 +18,11 @@ AccProjManagement::Application.routes.draw do
 
   root to: "home#show"
   get 'admin', to: 'users#admin'
-
+  put 'join', to: 'projects#join'
+  patch 'join', to: 'projects#join'
+  post 'join', to: 'projects#join'
+  put 'leave', to: 'projects#leave'
+  patch 'leave', to: 'projects#leave'
+  post 'leave', to: 'projects#leave'
 end
 

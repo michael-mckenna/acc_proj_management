@@ -1,34 +1,45 @@
-
 <%= render 'layouts/navigation' %>
+
 <div class="container">
-<h1 id="available_projects_header">Members Listing</h1>
+	<div id="member_listing_container">
+		<h1 id="member_listing_header">Members Listing</h1>
 
-<div id="member_list">
-<% @users.each do |user| %>
-	<%= link_to user.name, user_path(user) %>
+		<div id="member_list">
+			<% @users.each do |user| %>
 
-	<% if current_user.is_admin %>
-	
-		<%= form_for user do |f| %>
-	      <div class="form-group">
-	        
-		      
-		      <% if !user.is_admin %>
-		      	  <%= f.hidden_field :is_admin, value: true, :class => 'form-control' %>
-		          <%= f.submit 'Make Admin', :class => 'btn btn-primary' %>
-		      <% else %>
-		          <%= f.hidden_field :is_admin, value: false, :class => 'form-control' %>
-		          <%= f.submit 'Revoke Admin Status', :class => 'btn btn-warning' %>
-	          <% end %>
-	          <%= link_to 'Delete User', user_path(user), method: :delete, 
-	                                            data: { confirm: "Are you sure you want to delete this user?" }, 
-	                                            class: "btn btn-danger" %>
-	        </div>
-	      
-	    <% end %>
-    <% end %>
-<% end %>
+				<% if current_user.is_admin %>
+					<%= form_for user do |f| %>
+				      <div class="form-group member_directory_info">
+					      	<div class="row">
+					      		<div class="col-md-12">
+					      			<span class="user_name">
+						      			<i class="fas fa-user user_icon"></i> <%= link_to user.name, user_path(user) %>
+									</span>
+
+					      			<span class="btns">
+						      			<% if !user.is_admin %>
+								      	  <%= f.hidden_field :is_admin, value: true, :class => 'form-control' %>
+								          <%= f.submit 'Make Admin', :class => 'btn btn-success', :id => 'make_admin_btn' %>
+								      	<% else %>
+								          <%= f.hidden_field :is_admin, value: false, :class => 'form-control' %>
+								          <%= f.submit 'Revoke Admin Status', :class => 'btn btn-warning', :id => 'revoke_admin_btn' %>
+							          	<% end %>
+							        
+						      			<%= link_to 'Delete User', user_path(user), method: :delete, 
+	                                    data: { confirm: "Are you sure you want to delete this user?" }, 
+	                                    class: 'btn btn-danger', id: 'delete_user_btn' %>
+                                    </span>
+
+					      		</div>
+					      	</div>
+					      
+				      	  
+					    </div>
+				    <% end %>
+			    <% end %>
+			<% end %>
+		</div>
+	</div>
 
 </div>
 
-</div>
