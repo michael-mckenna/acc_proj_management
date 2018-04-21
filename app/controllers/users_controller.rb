@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 	
+	before_action :require_user
+
 	# User Profile
 	def show
 		@user = User.find(params[:id])
@@ -16,17 +18,13 @@ class UsersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 		if @user.update(user_params)
-			flash[:success] = "User was successfully updated"
 			redirect_to users_path(@user)
-		else
-			render 'edit'
 		end
 	end
 
 	def destroy
 		@user = User.find(params[:id])
 		@user.destroy
-		flash[:danger] = "User was successfully deleted"
 		redirect_to users_path
 	end
 
