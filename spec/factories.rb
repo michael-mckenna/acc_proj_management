@@ -4,4 +4,11 @@ FactoryBot.define do
         description "Test description"
         is_accepted  true
     end
-  end
+end
+
+FactoryBot.define do
+    factory :user do
+        name        "Test Name" 
+        is_admin  false
+    end
+end

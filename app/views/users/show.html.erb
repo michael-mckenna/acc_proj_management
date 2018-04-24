@@ -1,39 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>ACC Project Management</title>
-</head>
-<body>
+<%= render 'layouts/navigation' %>
 
-	<%= render 'layouts/navigation' %>
+<div class="container">
+	<div id="user_profile">
+		<div class="row">
+			<div class="col-md-12 col-lg-3">
+				<i class="fas fa-user fa-10x" id="user_image"></i>
+			</div>
 
-	<div class="container">
-		<div id="user_profile">
-			<div class="row">
-				<div class="col-12 col-md-4"><i class="fas fa-user fa-10x" id="user_image"></i></div>
-				<div class="col-md-8">
-					<div id="user_info">
-						<h3><strong>Profile</strong></h3>
-						<ul>
-							<li>Name: 
-								<%= @user.name %>
-							</li>
-							<li>Status: 
+			<div class="col-md-12 col-lg-9">
+				<div id="user_info_container">
+					<h3 id="user_info_heading">Profile</h3>
+					<div id="user_info_contents">
+						<div>
+							<span class="data_heading">Name:</span> <%= @user.name %>
+						</div>
+
+						<div>
+							<span class="data_heading">Status:</span>
 								<% if @user.is_admin %>
 									Admin
 								<% else %>
 									Member
 								<% end %>
-							</li>
-							<li>Projects: </li>
-						</ul>
+						</div>
+
+						<div>
+							<div class="data_heading">Project:</div>
+							<ul id="user_proj_display">
+								<% @user.projects.each do |project| %>
+									<div class="proj_display_link">
+									<div class="row">
+										<div class="col-sm-12 col-lg-8">
+											<li> <%= link_to project.name, project_path(project) %> </li>
+										</div>
+										<div class="col-sm-12 col-lg-4">
+											<%= form_for :project, :url => {:controller => "projects", :action => "leave", :id => project} do |f| %>
+										      <%= f.hidden_field :is_accepted, value: true, :class => 'form-control' %>
+										      <%= f.submit 'Leave Project', :class => 'btn btn-danger', :id => 'leave_proj_btn' %>
+										    <% end %>
+										</div>
+								    </div>
+								    </div>
+								<% end %>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-</body>
-</html>
+</div>
