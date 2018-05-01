@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    reset_session
-    redirect_to "https://accounts.google.com/Logout?continue=http://google.com"
+    redirect_to root_path
   end
 end
